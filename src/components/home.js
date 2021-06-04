@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import ImgSlider from './ImgSlider'
+import Viewers from './Viewers'
 
 const home = () => {
     return (
         <>
             <Container>
-
+                <ImgSlider />
+                <Viewers />
             </Container>
         </>
     )
@@ -15,6 +18,9 @@ export default home
 
 
 const Container = styled.div`
-    height: 100vh;
-    background-image: url('ghostBG.jpeg');
+    overflow-x: hidden;
+    min-height: calc(100vh - 70px);
+    position: relative;
+    background-color: #1a1c30;
+    padding: 0 calc(3.5vw + 5px);
 `
