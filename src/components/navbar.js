@@ -1,33 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link as LinkR } from 'react-router-dom'
 
 const navbar = () => {
     
     return (
         <>
-            <Nav>                
-                <Logo src='../images/mLogo.png' />
+            <Nav>
+                <LogoWrapper to="/">
+                    <Logo src='../images/mLogo.png' />
+                </LogoWrapper>             
+                
 
                 <NavLinks>
                     <a href="/">
-                        <img src='../images/home-icon.svg' />
+                        <img src='../images/home-icon.svg' alt='navimg'/>
                         <span>Home</span>
                     </a>
                     <a href="/">
-                        <img src='../images/movie-icon.svg' />
+                        <img src='../images/movie-icon.svg' alt='navimg'/>
                         <span>Influencers</span>
                     </a>
                     <a href="/">
-                        <img src='../images/watchlist-icon.svg' />  
-                        <span>Games</span>
+                        <img src='../images/watchlist-icon.svg' alt='navimg'/>  
+                        <span>Builds</span>
                     </a>
                     <a href="/">
-                        <img src='../images/original-icon.svg' />
+                        <img src='../images/original-icon.svg' alt='navimg'/>
                         <span>Records</span>
                     </a>
                 </NavLinks>
                 <NavAuthentication>
-                    <img src='../images/profilepic.jpg' />
+                    <img src='../images/profilepic.jpg' alt='navimg'/>
                 </NavAuthentication>
                 
                 
@@ -42,7 +46,8 @@ export default navbar
 
 
 const Nav = styled.nav`
-    background-color: #1a1c30;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(26,28,48,1) 100%, rgba(26,28,48,1) 100%);
     position: sticky;
     top: 0;
     height: 70px;
@@ -95,4 +100,8 @@ const NavAuthentication = styled.div`
 
 const Logo = styled.img`
     width: 60px;
+`
+
+const LogoWrapper = styled(LinkR)`
+    cursor: pointer;
 `

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Builds from './Builds'
 import ImgSlider from './ImgSlider'
 import Viewers from './Viewers'
 
@@ -9,6 +10,7 @@ const home = () => {
             <Container>
                 <ImgSlider />
                 <Viewers />
+                <Builds />
             </Container>
         </>
     )

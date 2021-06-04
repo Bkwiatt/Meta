@@ -5,10 +5,16 @@ const Viewers = () => {
     return (
         <Container>
             <Wrap>
-                <img src="./images/coldwar.png" />
+                <video autoPlay muted loop>
+                    <source src="./videos/cw-viewer-video.mp4" type="video/mp4" />
+                </video>
+                <img src="./images/coldwar.png" alt='viewerimg'/>                
             </Wrap>
             <Wrap>
-                <img src="./images/modernwarfare.png" />
+                <video autoPlay muted loop>
+                    <source src="./videos/mw-viewer-video.mp4" type="video/mp4" />
+                </video>
+                <img src="./images/modernwarfare.png" alt='viewerimg' />
             </Wrap>
             
         </Container>
@@ -20,6 +26,7 @@ export default Viewers
 
 const Container = styled.div`
     margin-top: 30px;
+    justify-content: center;
     display: grid;
     grid-gap: 25px;
     padding: 30px 0 26px;
@@ -28,6 +35,7 @@ const Container = styled.div`
 `
 
 const Wrap = styled.div`
+    position: relative;
     cursor: pointer;
     border-radius: 10px;
     border: 3px solid rgba(249, 249, 249, 0.1);
@@ -37,12 +45,31 @@ const Wrap = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+       
     }
     &:hover {
         box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
         rgb(0 0 0 / 72%) 0px 30px 22px -10px;
         transform: scale(1.05);
         border-color: rgba(249, 249, 249, 0.8);
+        
+        video {
+            opacity: 1;
+        }
+
         
    }
 `

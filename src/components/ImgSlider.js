@@ -17,17 +17,21 @@ function ImgSlider() {
     return (
         <Corousel {...settings}>
             <Wrap>
-                <img src='/images/slider-badging.jpg' alt="play"/>
+                <img src='/images/mw-slider.png' alt="play"/>
             </Wrap>
             <Wrap>
-                <img src='/images/slider-badag.jpg' alt="play" />
+                <img src='/images/kalei-slider.jpeg' alt="play"/>
             </Wrap>
             <Wrap>
-                <img src='/images/slider-scales.jpg' alt="play"/>
+                <img src='/images/coldwar-slider.jpeg' alt="play" />
             </Wrap>
             <Wrap>
-                <img src='/images/slider-scale.jpg' alt="play"/>
+                <img src='/images/aydan-slider.jpeg' alt="play" />
             </Wrap>
+            <Wrap>
+                <img src='/images/teepee-slider.jpeg' alt="play" />
+            </Wrap>
+            
         </Corousel>
         
     )}
@@ -36,6 +40,7 @@ export default ImgSlider
 
 
 const Corousel = styled(Slider)`
+    z-index: 0; 
     margin-top: 20px;
     ul li button {
         &:before { 
